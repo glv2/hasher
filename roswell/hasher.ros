@@ -9,7 +9,9 @@ exec ros -Q -- $0 "$@"
 ;;;; Distributed under the GNU GPL v3 or later.
 ;;;; See the file LICENSE for terms of use and distribution.
 
-(ql:quickload '(ironclad uiop) :silent t)
+(progn
+  (ros:ensure-asdf)
+  (ql:quickload '("ironclad" "uiop") :silent t))
 
 
 (defpackage :ros.hasher
