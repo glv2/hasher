@@ -1,0 +1,16 @@
+#+TITLE: hasher
+
+*hasher* is a command line tool to hash files and check file hashes. It is
+basically a frontend for the hashing capabilities of the [[https://github.com/sharplispers/ironclad][Ironclad]] library.
+
+* Standalone executable
+
+To build the binary you will need a Common Lisp implementation (SBCL
+recommended, CCL and ECL will work too but hashing will much much slower), ASDF
+and Ironclad. Then bulid with ~make~ (or ~make LISP=ccl~ to build using CCL).
+
+* Roswell
+
+There is also a *hasher* [[https://github.com/roswell/roswell][Roswell]] script in the /roswell/ directory. You can use
+it directly with ~./hasher.ros ...~ or build the binary with
+~ros dump executable hasher.ros~.
