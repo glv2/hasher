@@ -55,7 +55,6 @@ exec ros -Q -- $0 "$@"
   (let* ((digester (apply #'ironclad:make-digest digest-name digest-parameters))
          (buffer (make-array +buffer-size+ :element-type '(unsigned-byte 8)))
          (digest (make-array (ironclad:digest-length digester) :element-type '(unsigned-byte 8))))
-    (declare (dynamic-extent buffer))
     (dolist (filename filenames t)
       (let ((pathspec (uiop:file-exists-p (sanitize-filename filename))))
         (if pathspec
@@ -70,7 +69,6 @@ exec ros -Q -- $0 "$@"
          (buffer (make-array +buffer-size+ :element-type '(unsigned-byte 8)))
          (digest-length (ironclad:digest-length digester))
          (digest (make-array digest-length :element-type '(unsigned-byte 8))))
-    (declare (dynamic-extent buffer))
     (with-open-file (manifest filename)
       (do ((line (read-line manifest nil nil) (read-line manifest nil nil)))
           ((null line) t)
