@@ -6,8 +6,9 @@ basically a frontend for the hashing capabilities of the [[https://github.com/sh
 * Standalone executable
 
 To build the binary you will need a Common Lisp implementation (SBCL
-recommended, CCL and ECL will work too but hashing will much much slower), ASDF
-and Ironclad. Then bulid with ~make~ (or ~make LISP=ccl~ to build using CCL).
+recommended, CCL and ECL will work too but hashing will be much much slower),
+ASDF and Ironclad. Then build with ~make~ (or ~make LISP=ccl~ to build using
+CCL).
 
 * Roswell
 
