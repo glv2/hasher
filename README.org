@@ -1,5 +1,7 @@
 #+TITLE: hasher
 
+The active repository is at https://codeberg.org/glv/hasher
+
 *hasher* is a command line tool to hash files and check file hashes. It is
 basically a frontend for the hashing capabilities of the [[https://github.com/sharplispers/ironclad][Ironclad]] library.
 
